@@ -12,15 +12,18 @@ use DIGITALNAVAS_THEME\Inc\Traits\Singleton;
 class DIGITALNAVAS_THEME {
     use Singleton;
 
-    protected function __construct() {
-       wp_die('hello');
-        
+    protected function __construct() { 
         //load classes
-        $this->set_hooks();
+
+        Assets::get_instance();
+        
+        $this->setup_hooks();
     }
 
-    protected function set_hooks() {
-        //actions ans filters
-
+    protected function setup_hooks() {
+        /**
+         * Actions
+        */
     }
+
 }
