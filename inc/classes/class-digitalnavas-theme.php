@@ -10,12 +10,14 @@ namespace DIGITALNAVAS_THEME\Inc;
 use DIGITALNAVAS_THEME\Inc\Traits\Singleton;
 
 class DIGITALNAVAS_THEME {
+
     use Singleton;
 
     protected function __construct() { 
         //load classes
 
         Assets::get_instance();
+        Menus::get_instance();
         
         $this->setup_hooks();
     }
@@ -61,12 +63,14 @@ class DIGITALNAVAS_THEME {
             'script',
             'style',
         ]);
-
+        
+        // for TinyMCE editor x attack style sheet
         add_editor_style();
-
+        
+        // styles blocks
         add_theme_support( 'wp-block-styles' );
 
-        // options full width wide in guttenberg images 
+        // options "full width and wide" in guttenberg images or blocks? 
         add_theme_support( 'align-wide' );
 
         global $content_width;
