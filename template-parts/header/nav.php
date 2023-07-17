@@ -25,7 +25,8 @@ $header_menus = wp_get_nav_menu_items( $header_menu_id );//all menu items(parent
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
+    
+    <!-- dinamyc nav menu -->
     <?php 
     if( ! empty( $header_menus ) && is_array( $header_menus ) ) {
       ?>
@@ -66,13 +67,11 @@ $header_menus = wp_get_nav_menu_items( $header_menu_id );//all menu items(parent
                           <?php
                         }
                       ?>
-
                     </div>
-
                   </li>
-                <?php
-              }
-              ?>
+                  <?php
+                 }
+                ?>
               <?php
             }
           }
