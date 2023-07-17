@@ -42,7 +42,7 @@ class Assets {
         wp_register_script('main-js', DIGITALNAVAS_DIR_URI . '/assets/main.js', [], '1.0.0', true); // true -> script in footer
         wp_register_script('bootstrap-js', DIGITALNAVAS_DIR_URI . '/assets/src/library/js/bootstrap.min.js', ['jquery'], false, true);
 
-        // Enqueue the scripts
+        // Enqueue the scripts  
         wp_enqueue_script('main-js');
         wp_enqueue_script('bootstrap-js');
 
