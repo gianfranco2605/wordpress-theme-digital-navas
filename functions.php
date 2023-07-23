@@ -19,6 +19,7 @@ if ( !defined( 'DIGITALNAVAS_DIR_URI' ) ) {
 }
 
 require_once DIGITALNAVAS_DIR_PATH . '/inc/helpers/autoloader.php';
+require_once DIGITALNAVAS_DIR_PATH . '/inc/helpers/template-tags.php';
 
 function digitalnavas_get_theme_instance() {
     \DIGITALNAVAS_THEME\Inc\DIGITALNAVAS_THEME::get_instance();

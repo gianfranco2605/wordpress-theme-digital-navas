@@ -73,6 +73,11 @@ class DIGITALNAVAS_THEME {
         // options "full width and wide" in guttenberg images or blocks? 
         add_theme_support( 'align-wide' );
 
+        /**
+         * Register image sizes
+        */
+        add_image_size( 'feature-thumbnail', 290, 193, true  );
+
         global $content_width;
         if( ! isset( $content_width ) ) {
             $content_width = 1240;

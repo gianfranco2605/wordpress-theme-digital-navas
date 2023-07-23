@@ -12,5 +12,5 @@
        <?php esc_html_e( 'Single Post', 'digitalnavas' ) ?>
     </div>
 
-<?php get_footer(); ?>    
+<?php get_footer(); ?>
     
