@@ -5,9 +5,9 @@
  * @package Digital Navas
  */
 
-// Enable error reporting
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
+//  ini_set('display_errors', 1);
+//  ini_set('display_startup_errors', 1);
+//  error_reporting(E_ALL);
 
 // DIGITALNAVAS_DIR_PATH = /Users/gianfranconavas/Local Sites/wordpress-site/app/public/wp-content/themes/digitalnavas
 if (!defined('DIGITALNAVAS_DIR_PATH')) {

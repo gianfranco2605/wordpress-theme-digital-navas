@@ -18,6 +18,7 @@ class DIGITALNAVAS_THEME {
 
         Assets::get_instance();
         Menus::get_instance();
+        Meta_Boxes::get_instance();
         
         $this->setup_hooks();
     }
@@ -82,8 +83,7 @@ class DIGITALNAVAS_THEME {
         if( ! isset( $content_width ) ) {
             $content_width = 1240;
         }
-
-        
+    
     }
 
 }
