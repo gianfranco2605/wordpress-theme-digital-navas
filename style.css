@@ -13,3 +13,13 @@ img {
     width: 100%;
     height: auto;
 }
+
+/* Entry Meta */
+.updated:not(.published) {
+    display: nonne;
+}
+
+/* Nav Item - to dropdown submenus in hover */ 
+.nav-item:hover .dropdown-menu:not(.show) {
+    display: block;
+}

@@ -7,6 +7,12 @@
 */
 ?>
 
+
 <div class="entry-meta mb-3">
-    <?php digitalnavas_posted_on(); ?>
+    <?php 
+    // date post blog (find it in template-tags.php)
+    digitalnavas_posted_on(); 
+    // author post blog  (find it in template-tags.php)
+    digitalnavas_posted_by();
+    ?>
 </div>

@@ -31,6 +31,7 @@ function the_post_custom_thumbnail($post_id, $size = 'feature-thumbnail', $addit
 
 }
 
+// function to display date on blogs posts
 function digitalnavas_posted_on() {
     $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
     //POST IS MODIFIED
@@ -45,4 +46,24 @@ function digitalnavas_posted_on() {
     echo '<span class="posted-one text-secondary">' . $posted_on . '</span>';
 } 
 
-?>
+// function to display author of the single blog
+function digitalnavas_posted_by() {
+    $byline = sprintf(
+        esc_html_x( ' by %s', 'post author', 'aquila' ), '<span class="author vcard"><a href=" '. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) .' " > '. esc_html( get_the_author() ) .' </a></span>'
+    );
+
+    echo '<span class="byline text-secondary">' . $byline . '</span>';
+}
+
+function digitalnavas_the_excerpt( $trim_character_count = 0 ) {
+    if ( !has_excerpt() || 0 === $trim_character_count ) {
+        the_excerpt();
+        return;
+    }
+
+    $excerpt = wp_strip_all_tags( get_the_excerpt() );
+    $excerpt = substr( $excerpt, 0, $trim_character_count );
+    $excerpt = substr( $excerpt, 0, strrpos( $excerpt, ' ' ));
+
+    echo $excerpt . '[...]';
+}
