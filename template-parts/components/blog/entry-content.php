@@ -24,6 +24,11 @@
                 the_title( '<span class="screen-reader-text">"', '"</span>', false )
             )
                 );
+                // pagination single post
+                wp_link_pages([
+                    'before' => '<div class="page-links">' .esc_html__( 'Pages:', 'aquila' ),
+                    'after' => '</div>'
+                ]);
     } else {
         // function for just 200 text in blog page 
         digitalnavas_the_excerpt(200);
@@ -31,5 +36,6 @@
         echo digitalnavas_excerpt_more();
 
     }
+
     ?>
 </div>
