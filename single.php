@@ -32,18 +32,18 @@
                             get_template_part('template-parts/content');
 
                         endwhile;
-                        ?>
-                         
+                        previous_post_link();
+                        next_post_link();
+                        digitalnavas_pagination()
+                        ?>                       
                     </div>
                 <?php
 
                 else : 
                     // if there is not content(blogs) give this template
                     get_template_part('template-part/content-none');
-
-            endif;
+            endif;                     
          ?>
-
     </main>
 </div>
 

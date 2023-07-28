@@ -64,9 +64,13 @@
                     // if there is not content(blogs) give this template
                     get_template_part('template-part/content-none');
 
-            endif;
+            endif;          
          ?>
-
+         <div class="container">
+            <?php          
+            digitalnavas_pagination();
+            ?>
+         </div>
     </main>
 </div>
 
