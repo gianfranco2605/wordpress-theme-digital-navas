@@ -67,3 +67,13 @@ function digitalnavas_the_excerpt( $trim_character_count = 0 ) {
 
     echo $excerpt . '[...]';
 }
+
+// function to read more text in blogs
+function digitalnavas_excerpt_more( $more = '' ) {
+    if( ! is_single() ) {
+        $more = sprintf( '<button class="mt-4 btn-info"><a href="%1$s" class="digitalnavas-read-more text-white">%2$s</a></button>', get_permalink( get_the_ID() ), __('Read more', 'aquila')); 
+    };
+
+    return $more;
+}
+

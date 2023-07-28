@@ -25,7 +25,11 @@
             )
                 );
     } else {
+        // function for just 200 text in blog page 
         digitalnavas_the_excerpt(200);
+        // function to read more in blog text
+        echo digitalnavas_excerpt_more();
+
     }
     ?>
 </div>
