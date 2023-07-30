@@ -3,7 +3,6 @@
 ( function ( $ ) {
 	class Clock {
 		constructor() {
-			this.initializeClock();
 		}
 
 		initializeClock() {
