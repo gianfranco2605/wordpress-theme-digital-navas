@@ -8,22 +8,3 @@ Tags: digitalnavas, mobilefirst
 Version: 1.0
 Text Domain: digitalnavas
 **/
-
-body {
-    font-family: 'Lato', sans-serif !important;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-/* Entry Meta */
-.updated:not(.published) {
-    display: nonne;
-}
-
-/* Nav Item - to dropdown submenus in hover */ 
-.nav-item:hover .dropdown-menu:not(.show) {
-    display: block;
-}

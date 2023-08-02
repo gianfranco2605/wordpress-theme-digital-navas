@@ -26,8 +26,8 @@ if ( !defined( 'DIGITALNAVAS_BUILD_JS_URI' ) ) {
     define('DIGITALNAVAS_BUILD_JS_URI', untrailingslashit(get_template_directory_uri()) . 'assets/build/js');
 }
 
-if (!defined('DIGITALNAVAS_BUILD_JS_PATH')) {
-    define('DIGITALNAVAS_BUILD_JS_PATH', untrailingslashit(get_template_directory()) . 'assets/build/js');
+if (!defined('DIGITALNAVAS_BUILD_JS_DIR_PATH')) {
+    define('DIGITALNAVAS_BUILD_JS_DIR_PATH', untrailingslashit(get_template_directory()) . 'assets/build/js');
 }
 
 if ( !defined( 'DIGITALNAVAS_BUILD_IMG_URI' ) ) {
@@ -38,8 +38,8 @@ if ( !defined( 'DIGITALNAVAS_BUILD_CSS_URI' ) ) {
     define('DIGITALNAVAS_BUILD_CSS_URI', untrailingslashit(get_template_directory_uri()) . 'assets/build/css');
 }
 
-if (!defined('DIGITALNAVAS_BUILD_CSS_PATH')) {
-    define('DIGITALNAVAS_BUILD_CSS_PATH', untrailingslashit(get_template_directory()) . 'assets/build/css');
+if (!defined('DIGITALNAVAS_BUILD_CSS_DIR_PATH')) {
+    define('DIGITALNAVAS_BUILD_CSS_DIR_PATH', untrailingslashit(get_template_directory()) . 'assets/build/css');
 }
 
 require_once DIGITALNAVAS_DIR_PATH . '/inc/helpers/autoloader.php';
