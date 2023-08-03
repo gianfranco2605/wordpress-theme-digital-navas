@@ -21,10 +21,12 @@ if ( empty( $article_term ) || ! is_array( $article_term ) ) {
     <?php
         foreach ( $article_term as $key => $article_term ) {
             ?>
-            <button class="btn border border-secondary mb-20 mr-2">
-                <a class="entry-footer-link text-black-50" href="<?php echo esc_url( get_term_link( $article_term ) ); ?>"><?php echo esc_html( $article_term->name);?>
-                </a>
-            </button>
+                <!-- tag button -->
+                <a class="entry-footer-link text-black-50" href="<?php echo esc_url( get_term_link( $article_term ) ); ?>">
+                    <button class="btn border border-secondary mb-20 mr-2">
+                        <?php echo esc_html( $article_term->name);?>
+                    </button>
+                </a>           
             <?php
         }
     ?>

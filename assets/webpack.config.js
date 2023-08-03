@@ -17,6 +17,7 @@ const BUILD_DIR = path.resolve( __dirname, 'build' );
 const entry = {
 	main: JS_DIR + '/main.js',
 	single: JS_DIR + '/single.js',
+	editor: JS_DIR + '/editor.js'
 };
 
 const output = {
@@ -42,7 +43,7 @@ const rules = [
 	},
 	{
 		test: /\.(png|jpg|svg|jpeg|gif|ico)$/,
-		use: [
+		use: 
 			{
 				loader: 'file-loader',
 				options: {
@@ -50,8 +51,19 @@ const rules = [
 					publicPath: 'production' === process.env.NODE_ENV ? '../' : '../../'
 				}
 			}
-		]
+		
 	},
+	{
+		test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+		exclude: [ IMG_DIR, /node_modules/ ],
+		use: {
+			loader: 'file-loader',
+			options: {
+				name: '[path][name].[ext]',
+				publicPath: 'production' === process.env.NODE_ENV ? '../' : '../../'
+			}
+		}
+	}
 ];
 
 /**

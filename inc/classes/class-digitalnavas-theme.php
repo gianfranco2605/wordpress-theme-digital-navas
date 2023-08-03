@@ -20,6 +20,7 @@ class DIGITALNAVAS_THEME {
         Menus::get_instance();
         Meta_Boxes::get_instance();
         Sidebars::get_instance();
+        Block_Patterns::get_instance();
         
         $this->setup_hooks();
     }
@@ -66,14 +67,14 @@ class DIGITALNAVAS_THEME {
             'style',
         ]);
         
-        // for TinyMCE editor x attack style sheet
-        add_editor_style();
-        
         // styles blocks
         add_theme_support( 'wp-block-styles' );
 
         // options "full width and wide" in guttenberg images or blocks? 
         add_theme_support( 'align-wide' );
+
+        // for TinyMCE editor x attack style sheet
+        add_editor_style( 'assets/build/css/editor.css' );
 
         /**
          * Register image sizes

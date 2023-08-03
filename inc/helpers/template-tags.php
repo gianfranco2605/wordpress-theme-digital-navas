@@ -49,7 +49,7 @@ function digitalnavas_posted_on() {
 // function to display author of the single blog
 function digitalnavas_posted_by() {
     $byline = sprintf(
-        esc_html_x( ' by %s', 'post author', 'aquila' ), '<span class="author vcard"><a href=" '. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) .' " > '. esc_html( get_the_author() ) .' </a></span>'
+        esc_html_x( ' by %s', 'post author', 'digitalnavas' ), '<span class="author vcard"><a href=" '. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) .' " > '. esc_html( get_the_author() ) .' </a></span>'
     );
 
     echo '<span class="byline text-secondary">' . $byline . '</span>';
@@ -71,7 +71,7 @@ function digitalnavas_the_excerpt( $trim_character_count = 0 ) {
 // function to read more text in blogs
 function digitalnavas_excerpt_more( $more = '' ) {
     if( ! is_single() ) {
-        $more = sprintf( '<button class="mt-4 btn-info"><a href="%1$s" class="digitalnavas-read-more text-white">%2$s</a></button>', get_permalink( get_the_ID() ), __('Read more', 'aquila')); 
+        $more = sprintf( '<a href="%1$s" class="digitalnavas-read-more text-white"><button class="mt-3 btn btn-info">%2$s</button></a>', get_permalink( get_the_ID() ), __('Read more', 'digitalnavas')); 
     };
 
     return $more;
@@ -95,7 +95,7 @@ function digitalnavas_pagination() {
 		'after_page_number' => '</span>',
 	];
 
-	printf( '<nav class="aquila-pagination clearfix">%s</nav>', wp_kses( paginate_links( $args ), $allowed_tags ) );
+	printf( '<nav class="digitalnavas-pagination clearfix">%s</nav>', wp_kses( paginate_links( $args ), $allowed_tags ) );
 }
 
 
