@@ -76,6 +76,9 @@ class DIGITALNAVAS_THEME {
         // for TinyMCE editor x attack style sheet
         add_editor_style( 'assets/build/css/editor.css' );
 
+        //Remove the core block patterns
+        remove_theme_support( 'core-block-patterns' );
+
         /**
          * Register image sizes
         */
