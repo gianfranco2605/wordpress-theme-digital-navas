@@ -22,6 +22,10 @@ if ( !defined( 'DIGITALNAVAS_BUILD_URI' ) ) {
     define('DIGITALNAVAS_BUILD_URI', untrailingslashit(get_template_directory_uri()) . 'assets/build');
 }
 
+if (!defined('DIGITALNAVAS_BUILD_PATH')) {
+    define('DIGITALNAVAS_BUILD_PATH', untrailingslashit(get_template_directory() . '/assets/build'));
+}
+
 if ( !defined( 'DIGITALNAVAS_BUILD_JS_URI' ) ) {
     define('DIGITALNAVAS_BUILD_JS_URI', untrailingslashit(get_template_directory_uri()) . 'assets/build/js');
 }
